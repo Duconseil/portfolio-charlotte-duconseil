@@ -1,0 +1,438 @@
+/* TYPOGRAPHIE */
+.imperial-script-regular {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.italianno-regular {
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Helvetica";
+  src: url("fonts/Helvetica.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "Jaymont";
+  src: url("fonts/Jaymont-light.ttf") format("truetype");
+}
+
+h1{
+  font-size: 80px;
+  font-family: "Jaymont";
+  font-weight: bold;
+  }
+
+
+h3{
+  font-weight: bold;
+  font-family: "Helvetica";
+  font-size: 70px;
+}
+
+h4, a,{
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+p {
+  font-family: "Helvetica";
+
+}
+
+
+
+/* HEADER */
+header {
+  padding: 10px;
+  margin-bottom: 70px;
+  margin-top: 0px;
+}
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  .navbar-brand img {
+    margin-right: 70px;
+  }
+
+
+
+  /* PREMIERE PARTIE */
+
+.titre{
+  text-align: end;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start; /* Centre les images verticalement */
+}
+
+.intro{
+  float: left;
+}
+
+  /* DEUXIÈME PARTIE */
+
+#evenementiel{
+  padding-left: 500px;
+}
+
+#designeuse{
+  padding-left: 200px;
+}
+
+#separateur{
+  font-family: "Imperial Script", cursive;
+  font-size: 150px;
+}
+
+
+.scroll-indicator {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(30, 30, 30, 0.7);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+
+.line {
+  display: block;
+  margin: 20px 0;
+  padding: 5px 10px;
+  transition: filter 0.5s ease;
+  display: flex;
+}
+
+#index{
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#index-container{
+  margin-bottom: 100px;
+}
+
+/* CONTAINER */
+.acceuil_container{
+  padding-top: 90px;
+  margin: 100px;
+  margin-bottom: 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo_container{
+  margin: 100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: end;
+}
+
+/* PROJETS */
+
+.acceuil_container-projet{
+  padding-top: 90px;
+  margin: 100px;
+  margin-bottom: 0px;
+  position: relative;
+  overflow: hidden;
+  height: 1800px;
+
+}
+
+
+.col-12.col-md-6 {
+  display: flex;
+  justify-content: center;  /* Centre les images horizontalement */
+  align-items: flex-start;  /* Aligne les images en haut */
+}
+
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  height: auto;
+  overflow: hidden;
+  width: 30%; /* Réduit l'espace horizontal entre les images */
+  margin: 10px; /* Réduit les marges entre les images */
+
+}
+
+.overlay-text {
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;  /* Aligne le contenu entre gauche et droite */
+  align-items: center;             /* Centre verticalement */
+
+  width: 100%;
+  height: 60px;
+  padding: 0 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: white;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.image-container:hover .overlay-text {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Styles spécifiques pour l'explication (gauche) */
+.explanation {
+  flex: 1;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+/* Styles spécifiques pour la date (droite) */
+.date {
+  text-align: right;
+  font-size: 1.2rem;
+  white-space: nowrap; /* Empêche la date de se diviser sur plusieurs lignes */
+}
+
+
+
+.image-container:hover .overlay-text {
+  transform: translateY(0);
+}
+
+#projet, #projet-2{
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; /* Largeur flexible pour que le contenu s'adapte */
+}
+
+
+.conteneur-bouton{
+  display: flex;
+  justify-content: flex-end; /* place le bouton à droite */
+  align-items: center;        /* verticalement centré si hauteur définie */
+  height: 100px;              /* ou ce que tu veux selon le contexte */
+  margin-right: 130px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+
+}
+#bouton-projet{
+  padding: 20px;
+  background-color: #ffffff;
+  color: black;
+  border: 2px solid #000000;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#bouton-projet:hover{
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+
+/* RESPONSIVE */
+/* Ajoutez ces modifications à votre fichier CSS existant */
+
+/* Ajustements pour la section des projets en responsive */
+@media (max-width: 700px) {
+  /* Vos styles existants */
+  #nom{
+    font-size: 30px;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+
+  h3{
+    font-size: 20px;
+  }
+
+  .debut{
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  #deuxieme-photo{
+    display: none;
+  }
+
+  #moi{
+    width: 200px;
+  }
+
+  #index {
+    font-size: 20px !important;
+  }
+
+  #index-container{
+    text-align: left !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  /* Modifications pour la section des projets */
+  .acceuil_container-projet {
+    height: 2800px !important;
+    padding-bottom: 30px;
+    margin: 50px 10px; /* Réduire encore plus les marges latérales */
+  }
+
+  #projet, #projet-2 {
+    display: block; /* Changer en block pour s'assurer que chaque élément occupe toute la largeur */
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .image-container {
+    width: 70%; /* Réduire davantage à 70% de la largeur disponible */
+    margin: 20px auto; /* Espacement vertical et centrage horizontal */
+    display: block; /* S'assurer que le conteneur est en block */
+    max-width: 350px; /* Limiter la largeur maximale */
+  }
+
+  .overlay-text {
+    height: 50px; /* Ajuster la hauteur de l'overlay pour qu'il soit plus visible */
+    padding: 0 10px;
+  }
+
+  .explanation h4 {
+    font-size: 16px; /* Ajustement de la taille de la police pour l'explication */
+  }
+
+  .date {
+    font-size: 14px; /* Ajustement de la taille de la police pour la date */
+  }
+
+  /* Ajustement du bouton "Voir tous mes projets" */
+  .conteneur-bouton {
+    margin-right: 0;
+    justify-content: center; /* Centrer le bouton */
+    margin-top: 40px;
+  }
+
+  #bouton-projet {
+    padding: 15px;
+    width: 80%; /* Élargir le bouton */
+    max-width: 300px;
+  }
+
+  /* Ajustements pour les titres descriptifs */
+  h3.line {
+    font-size: 20px; /* Réduire la taille de police */
+    margin: 15px 0; /* Réduire les marges */
+    padding-left: 0 !important; /* Supprimer tous les décalages horizontaux */
+  }
+
+  #separateur {
+    font-size: 50px; /* Réduire la taille du séparateur "&" */
+  }
+
+  /* Cibler la div qui contient CRÉATRICE D'ÉVÉNEMENT et le séparateur & */
+  div.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Enlever les décalages spécifiques */
+  #designeuse, #evenementiel {
+    padding-left: 0;
+  }
+
+  .acceuil_container{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+
+@media (max-width: 1200px) {
+
+  /* Modifications pour la section des projets */
+  .acceuil_container-projet {
+    padding-bottom: 30px;
+    margin: 50px 10px; /* Réduire encore plus les marges latérales */
+  }
+
+  #projet, #projet-2 {
+    display: block; /* Changer en block pour s'assurer que chaque élément occupe toute la largeur */
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .image-container {
+    width: 70%; /* Réduire davantage à 70% de la largeur disponible */
+    margin: 20px auto; /* Espacement vertical et centrage horizontal */
+    display: block; /* S'assurer que le conteneur est en block */
+    max-width: 350px; /* Limiter la largeur maximale */
+  }
+
+  .overlay-text {
+    height: 50px; /* Ajuster la hauteur de l'overlay pour qu'il soit plus visible */
+    padding: 0 10px;
+  }
+
+  .explanation h4 {
+    font-size: 16px; /* Ajustement de la taille de la police pour l'explication */
+  }
+
+  .date {
+    font-size: 14px; /* Ajustement de la taille de la police pour la date */
+  }
+
+  /* Ajustement du bouton "Voir tous mes projets" */
+  .conteneur-bouton {
+    margin-right: 0;
+    justify-content: center; /* Centrer le bouton */
+    margin-top: 40px;
+  }
+
+  #bouton-projet {
+    padding: 15px;
+    width: 80%; /* Élargir le bouton */
+    max-width: 300px;
+  }
+}
