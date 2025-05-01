@@ -321,9 +321,9 @@ header {
   /* Modifications pour la section des projets */
   .acceuil_container-projet {
     height: 2600px !important;
-    padding-bottom: 30px;
+    padding-bottom: 0px !important;
     padding-top: 30px;
-    margin:  10px 10px 50px 10px !important; /* Réduire encore plus les marges latérales */
+    margin:  10px 10px 0px 10px !important; /* Réduire encore plus les marges latérales */
   }
 
   #projet, #projet-2 {
@@ -398,10 +398,94 @@ header {
     margin-top: 50px;
     padding: 0px;
   }
+
+  .image-container .overlay-text {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto; /* Permettre les interactions */
+
+    /* Conserver la position en haut de l'image */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Garder l'alignement horizontal entre texte et date */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Conserver uniquement les bordures comme en desktop */
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: none;
+    border-right: none;
+
+    /* Ajuster la hauteur si nécessaire pour mobile */
+    height: 50px;
+
+    /* Assurer une bonne visibilité */
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  /* Conserver les styles spécifiques pour l'explication et la date */
+  .explanation {
+    flex: 1;
+    text-align: left;
+  }
+
+  .date {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* S'assurer que l'image est bien visible sous l'overlay */
+  .image-container img {
+    display: block;
+    width: 100%;
+  }
 }
 
 
 @media (max-width: 1200px) {
+
+
+
+  h3{
+    font-size: 20px;
+  }
+
+  h4{
+    font-size: 16px;
+  }
+
+  .debut{
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  #deuxieme-photo{
+    display: none;
+  }
+
+  #moi{
+    width: 200px;
+  }
+
+  h1#index {
+    font-size: 20px !important;
+    display: flex;
+    justify-content: flex-first baseline !important;
+    align-items: first baseline;
+    margin: 0 40px;
+  }
+
+
+  #index-container{
+    text-align: left !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 50px;
+  }
 
   /* Modifications pour la section des projets */
   .acceuil_container-projet {
@@ -450,48 +534,4 @@ header {
     max-width: 300px;
   }
 
-  .image-container .overlay-text {
-    opacity: 1;
-    transform: scale(1);
-    pointer-events: auto; /* Permettre les interactions */
-
-    /* Conserver la position en haut de l'image */
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    /* Garder l'alignement horizontal entre texte et date */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    /* Conserver uniquement les bordures comme en desktop */
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-left: none;
-    border-right: none;
-
-    /* Ajuster la hauteur si nécessaire pour mobile */
-    height: 50px;
-
-    /* Assurer une bonne visibilité */
-    background: rgba(255, 255, 255, 0.95);
-  }
-
-  /* Conserver les styles spécifiques pour l'explication et la date */
-  .explanation {
-    flex: 1;
-    text-align: left;
-  }
-
-  .date {
-    text-align: right;
-    white-space: nowrap;
-  }
-
-  /* S'assurer que l'image est bien visible sous l'overlay */
-  .image-container img {
-    display: block;
-    width: 100%;
-  }
 }
