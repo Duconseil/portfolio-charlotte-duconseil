@@ -18,7 +18,7 @@
 
 @font-face{
   font-family: "Jaymont";
-  src: url("fonts/Jaymont-light.ttf") format("truetype");
+  src: url("fonts/Jaymont.ttf") format("truetype");
 }
 
 h1{
@@ -285,6 +285,10 @@ header {
     font-size: 20px;
   }
 
+  h4{
+    font-size: 16px;
+  }
+
   .debut{
     font-size: 16px;
     margin-bottom: 40px;
@@ -298,21 +302,28 @@ header {
     width: 200px;
   }
 
-  #index {
+  h1#index {
     font-size: 20px !important;
+    display: flex;
+    justify-content: flex-first baseline !important;
+    align-items: first baseline;
+    margin: 0 40px;
   }
+
 
   #index-container{
     text-align: left !important;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-bottom: 50px;
   }
 
   /* Modifications pour la section des projets */
   .acceuil_container-projet {
-    height: 2800px !important;
+    height: 2600px !important;
     padding-bottom: 30px;
-    margin: 50px 10px; /* Réduire encore plus les marges latérales */
+    padding-top: 30px;
+    margin:  10px 10px 50px 10px !important; /* Réduire encore plus les marges latérales */
   }
 
   #projet, #projet-2 {
@@ -351,9 +362,10 @@ header {
   }
 
   #bouton-projet {
-    padding: 15px;
     width: 80%; /* Élargir le bouton */
     max-width: 300px;
+    padding: 10px !important;
+
   }
 
   /* Ajustements pour les titres descriptifs */
@@ -383,6 +395,8 @@ header {
   .acceuil_container{
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 50px;
+    padding: 0px;
   }
 }
 
@@ -432,7 +446,52 @@ header {
 
   #bouton-projet {
     padding: 15px;
-    width: 80%; /* Élargir le bouton */
+    width: 50%; /* Élargir le bouton */
     max-width: 300px;
+  }
+
+  .image-container .overlay-text {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto; /* Permettre les interactions */
+
+    /* Conserver la position en haut de l'image */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Garder l'alignement horizontal entre texte et date */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Conserver uniquement les bordures comme en desktop */
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: none;
+    border-right: none;
+
+    /* Ajuster la hauteur si nécessaire pour mobile */
+    height: 50px;
+
+    /* Assurer une bonne visibilité */
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  /* Conserver les styles spécifiques pour l'explication et la date */
+  .explanation {
+    flex: 1;
+    text-align: left;
+  }
+
+  .date {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* S'assurer que l'image est bien visible sous l'overlay */
+  .image-container img {
+    display: block;
+    width: 100%;
   }
 }
