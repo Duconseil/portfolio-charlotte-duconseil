@@ -320,7 +320,7 @@ header {
 
   /* Modifications pour la section des projets */
   .acceuil_container-projet {
-    height: 2600px !important;
+    height: 2900px !important;
     padding-bottom: 0px !important;
     padding-top: 30px;
     margin:  10px 10px 0px 10px !important; /* Réduire encore plus les marges latérales */
