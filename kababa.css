@@ -23,12 +23,11 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding-bottom: 20px; /* Ajoute un peu d'espace en bas */
 }
 
 .sticky-image img {
-  width: 1000px !important;
-  height: 1000px !important;
+  width: 1000px;
+  height: 1000px;
 }
 
 .content {
@@ -37,7 +36,7 @@ body {
 }
 
 .content-block {
-  margin-bottom: 40vh;
+  margin-bottom: 110px;
 }
 
 .content-block:last-child {
