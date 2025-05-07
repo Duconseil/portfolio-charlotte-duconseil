@@ -133,3 +133,28 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* une seule colonne */
+    padding: 1rem;
+  }
+
+  .image-container {
+    width: 100%;
+    aspect-ratio: auto; /* permet une hauteur naturelle */
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto; /* empêche le rognage vertical */
+    object-fit: contain; /* montre l’image entière */
+    display: block;
+    margin: 0 auto; /* centre l’image horizontalement */
+  }
+
+  .container-photographie{
+    margin: 50px;
+  }
+}
