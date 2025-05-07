@@ -23,6 +23,8 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
+  aspect-ratio: 10 / 12;
+
 }
 
 .image-container img {
@@ -121,4 +123,13 @@ body {
 
 .close:hover {
   color: #bbb;
+}
+
+
+.container-photographie {
+  padding-top: 90px;
+  margin: 100px;
+  margin-bottom: 200px;
+  position: relative;
+  overflow: hidden;
 }
