@@ -54,9 +54,12 @@ h5{
 
 /* HEADER */
 header {
-  padding: 10px;
-  margin-bottom: 70px;
-  margin-top: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding-top: 80px; /* même hauteur que ton header */
 }
 
   .navbar-toggler-icon {
@@ -67,6 +70,47 @@ header {
     margin-right: 70px;
   }
 
+/* Header toujours opaque, sans transparence */
+#main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: white; /* Fond bien opaque */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* ombre douce pour bien délimiter */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 1;
+}
+
+/* Classe appliquée quand on cache le header */
+.header-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+footer {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid black;
+  padding: 1rem 0;
+  margin: 2rem 0;
+}
+
+.footer-container p {
+  margin: 0;
+}
+
+.social-icons a {
+  margin-left: 1rem;
+  color: inherit; /* pour hériter du texte et éviter le bleu par défaut */
+}
 
 
   /* PREMIERE PARTIE */
@@ -134,7 +178,6 @@ header {
 
 /* CONTAINER */
 .acceuil_container{
-  padding-top: 90px;
   margin: 100px;
   margin-bottom: 0px;
   position: relative;
@@ -171,7 +214,6 @@ header {
 
 .image-container {
   position: relative;
-  display: inline-block;
   height: auto;
   overflow: hidden;
   width: 30%; /* Réduit l'espace horizontal entre les images */
