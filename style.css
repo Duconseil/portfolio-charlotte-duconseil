@@ -136,7 +136,6 @@ header {
   overflow: hidden;
 }
 
-
 .photo_container{
   margin: 100px;
   position: relative;
@@ -446,6 +445,15 @@ header {
   }
 }
 
+.img-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.img-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 @media (max-width: 1200px) {
 
