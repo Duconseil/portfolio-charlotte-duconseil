@@ -80,6 +80,24 @@
     </div>
   </div>
 
+  <script>
+    let lastScrollTop = 0;
+    const header = document.getElementById('main-header');
+
+    window.addEventListener('scroll', function () {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        // Scroll vers le bas → cache le header
+        header.classList.add('header-hidden');
+      } else {
+        // Scroll vers le haut → montre le header avec effet
+        header.classList.remove('header-hidden');
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

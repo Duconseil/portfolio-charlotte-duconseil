@@ -245,6 +245,31 @@ footer {
   font-weight: 600;
 }
 
+.carousel-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Si écran petit, les éléments se placent en colonne */
+}
+
+.carousel-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-below-carousel {
+  margin-top: 30px;
+}
+
+.image-below-carousel img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
 /* Media queries pour les écrans mobiles */
 @media (max-width: 768px) {
   h3 {
