@@ -2,9 +2,12 @@ body {
   overflow-x: hidden;
 }
 
+
+
 .kebaba-container {
   padding-top: 80px; /* Réduit pour correspondre à la hauteur du header */
   min-height: 100vh;
+  margin-bottom: 100px;
 }
 
 .sticky-section {
@@ -75,7 +78,19 @@ body {
   max-width: 600px;
 }
 
+.img-kebaba {
+  width: 550px;
+  height: 500px;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
+
+  h3{
+    margin-left: 30px;
+
+  }
+
   .sticky-section {
       flex-direction: column;
   }
@@ -90,6 +105,11 @@ body {
       margin-bottom: 30px;
   }
 
+  .sticky-image img {
+      width: 100%;
+      height: auto;
+  }
+
   .content {
       padding-left: 0;
   }
@@ -97,4 +117,17 @@ body {
   .content-block {
       margin-bottom: 20vh;
   }
+
+  #deux-images{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-kebaba {
+    width: 90%;
+    height: auto;
+  }
+
+
 }
