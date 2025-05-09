@@ -108,6 +108,9 @@ footer {
 
   h3{
     margin-left: 30px;
+    margin-top: 50px;
+    font-size: 40px;
+
 
   }
 
@@ -160,9 +163,5 @@ footer {
 
   h3.mb-5 {
     margin-bottom: 1.5rem; /* ou même 1rem si tu veux */
-  }
-
-  h3 {
-    margin-top: 50px;
   }
 }
