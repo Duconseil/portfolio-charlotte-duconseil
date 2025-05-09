@@ -104,34 +104,84 @@ footer {
   width: 48%; /* Légèrement moins de 50% pour laisser un espace entre les deux */
 }
 
+/* Conteneur principal du carrousel */
 .carousel-container {
   position: relative;
-  width: 100%;
-  margin: 0 auto;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: height 0.3s ease-in-out;
 }
 
+/* Bande de slides */
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
 }
 
+/* Slide individuel */
 .carousel-slide {
   min-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
+  box-sizing: border-box;
 }
 
+/* Images dans les slides */
 .carousel-slide img {
-  max-width: 100%;
-  max-height: 400px;
+  display: block;
+  width: 100%;
+  height: auto;
   object-fit: contain;
 }
+
+/* Flèches de navigation (gauche et droite) */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-arrow-left {
+  left: 10px;
+}
+
+.carousel-arrow-right {
+  right: 10px;
+}
+
+/* Points de navigation */
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-dot.active {
+  background-color: #333;
+}
+
 
 .carousel-arrow {
   position: absolute;
