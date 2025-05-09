@@ -2,6 +2,25 @@ body {
   overflow-x: hidden;
 }
 
+/* Appliquer au body et html */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Appliquer à un wrapper global */
+body > .kebaba-container {
+  flex: 1 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  flex-shrink: 0;
+}
 
 
 .kebaba-container {
@@ -26,6 +45,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  height: calc(100vh - 80px); /* trop grand en mobile */
 }
 
 .sticky-image img {
@@ -93,6 +113,7 @@ body {
 
   .sticky-section {
       flex-direction: column;
+
   }
 
   .sticky-image, .content {
@@ -100,14 +121,18 @@ body {
   }
 
   .sticky-image {
-      position: relative;
-      height: 60vh;
-      margin-bottom: 30px;
+    height: auto !important; /* force */
+    max-height: none;
+    margin-top: 0;
+    padding-top: 0;
+    position: static !important;
   }
+
 
   .sticky-image img {
       width: 100%;
       height: auto;
+      margin-bottom: 30px;
   }
 
   .content {
@@ -129,5 +154,11 @@ body {
     height: auto;
   }
 
+  #premiere-image{
+    margin-bottom: 20px;
+  }
 
+  h3.mb-5 {
+    margin-bottom: 1.5rem; /* ou même 1rem si tu veux */
+  }
 }
