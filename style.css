@@ -490,6 +490,21 @@ footer {
     display: block;
     width: 100%;
   }
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-container .social-icons {
+    margin-top: 20px;
+  }
+
+  .footer-container p {
+    margin-bottom: 20px;
+  }
+
+  .social-icons a {
+    margin: 0 10px; /* Espacement entre les icônes */
+  }
 }
 
 .img-hover {
@@ -588,6 +603,22 @@ footer {
     padding: 15px;
     width: 50%; /* Élargir le bouton */
     max-width: 300px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-container .social-icons {
+    margin-top: 20px;
+  }
+
+  .footer-container p {
+    margin-bottom: 20px;
+  }
+
+  .social-icons a {
+    margin: 0 10px; /* Espacement entre les icônes */
   }
 
 }
