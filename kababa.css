@@ -2,6 +2,10 @@ body {
   overflow-x: hidden;
 }
 
+h3 {
+  margin-top: 100px;
+}
+
 /* Appliquer au body et html */
 html, body {
   height: 100%;
