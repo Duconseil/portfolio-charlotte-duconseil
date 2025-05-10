@@ -107,11 +107,19 @@ footer {
 }
 
 .img-kebaba {
-  width: 650px;
-  height: 500px;
-  object-fit: cover;
-  object-fit: contain;
+  height: 900px;           /* fixe la même hauteur pour toutes */
+  width: 200px;             /* laisse la largeur s’ajuster naturellement */
+  max-width: 100%;
+  object-fit: cover;       /* ou "contain" si tu veux tout voir sans crop */
+  flex: 1;
+}
 
+.deux-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
 }
 
 @media (max-width: 768px) {
@@ -162,9 +170,15 @@ footer {
     justify-content: center;
   }
 
+  .deux-images {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .img-kebaba {
     width: 90%;
-    height: auto;
+    height: auto;     /* sur mobile, on laisse les images naturelles */
+    object-fit: contain;
   }
 
   #premiere-image{
