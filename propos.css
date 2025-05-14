@@ -184,7 +184,8 @@ div.container {
   }
 
   #bouton-projet{
-    width: 100%;
+    width: 150px;
+    margin-bottom: 100px;
   }
 
   .propos-bouton{
