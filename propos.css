@@ -46,7 +46,7 @@ footer {
 }
 
 .sticky-image img {
-  width: 300px;
+  width: 350px;
   height: auto;
   object-fit: cover;
   max-height: 80vh;
@@ -57,11 +57,10 @@ footer {
 
 .content {
   width: 50%;
-padding-right: 50px;
 }
 
 .content-block {
-  margin-bottom: 110px !important;
+  margin-bottom: 150px !important;
 }
 
 .content-block:last-child {
