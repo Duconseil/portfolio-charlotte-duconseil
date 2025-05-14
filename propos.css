@@ -1,0 +1,181 @@
+.propos-container {
+  padding-top: 80px; /* Réduit pour correspondre à la hauteur du header */
+  min-height: 100vh;
+  margin-bottom: 100px;
+}
+
+#propos{
+  margin-bottom: 100px!important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h3 {
+  margin-top: 100px;
+}
+
+/* Appliquer au body et html */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Appliquer à un wrapper global */
+body > .propos-container {
+  flex: 1 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  flex-shrink: 0;
+}
+
+
+.sticky-section {
+  display: flex;
+  position: relative;
+  align-items: stretch;
+  justify-content: space-between;
+  position: relative;
+}
+
+.sticky-image img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  max-height: 80vh;
+}
+
+
+
+
+.content {
+  width: 50%;
+padding-right: 50px;
+}
+
+.content-block {
+  margin-bottom: 110px !important;
+}
+
+.content-block:last-child {
+  margin-bottom: 0;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.full-scroll-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.full-scroll-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.full-scroll-section p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.img-kebaba {
+  width: 650px;
+  height: 500px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+  h3{
+    margin-left: 30px;
+    margin-top: 50px;
+    font-size: 40px;
+
+
+  }
+
+  .sticky-section {
+      flex-direction: column;
+
+  }
+
+  .sticky-image, .content {
+      width: 100%;
+  }
+
+  .sticky-image {
+    height: auto !important; /* force */
+    max-height: none;
+    margin-top: 0;
+    padding-top: 0;
+    position: static !important;
+  }
+
+
+  .sticky-image img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+  }
+
+  .content {
+      padding-left: 0;
+  }
+
+  .content-block {
+      margin-bottom: 20vh;
+  }
+
+  #deux-images{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-kebaba {
+    width: 90%;
+    height: auto;
+  }
+
+  #premiere-image{
+    margin-bottom: 20px;
+  }
+
+  h3.mb-5 {
+    margin-bottom: 1.5rem; /* ou même 1rem si tu veux */
+  }
+}
+
+.conteneur-bouton{
+  display: flex;
+  justify-content: flex-end; /* place le bouton à droite */
+  align-items: center;        /* verticalement centré si hauteur définie */
+  height: 100px;              /* ou ce que tu veux selon le contexte */
+  margin-right: 130px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+
+}

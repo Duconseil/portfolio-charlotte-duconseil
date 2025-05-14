@@ -281,9 +281,8 @@ footer {
 }
 
 
-.conteneur-bouton{
+.propos-bouton{
   display: flex;
-  justify-content: flex-end; /* place le bouton à droite */
   align-items: center;        /* verticalement centré si hauteur définie */
   height: 100px;              /* ou ce que tu veux selon le contexte */
   margin-right: 130px;
