@@ -183,6 +183,14 @@ div.container {
     margin-bottom: 20px;
   }
 
+  #bouton-projet{
+    width: 100%;
+  }
+
+  .propos-bouton{
+    margin-top: 50px;
+  }
+
 }
 
 .conteneur-bouton{
