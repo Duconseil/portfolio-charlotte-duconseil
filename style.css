@@ -124,6 +124,10 @@ footer {
   align-items: flex-start; /* Centre les images verticalement */
 }
 
+#premiere{
+  width: 500px;
+}
+
 .intro{
   float: left;
 }
