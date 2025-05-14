@@ -14,6 +14,7 @@ body {
 
 h3 {
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /* Appliquer au body et html */
@@ -107,10 +108,25 @@ footer {
 
 @media (max-width: 768px) {
 
+  /* Cache l'image collée à droite en version mobile */
+.sticky-image {
+  display: none;
+}
+
+/* Affiche uniquement la version mobile de l'image */
+.mobile-image-only {
+  text-align: center;
+}
+
+div.container {
+  padding: 0 30px ;
+}
+
   h3{
-    margin-left: 30px;
+    margin-left: 0px;
     margin-top: 50px;
     font-size: 40px;
+    margin-bottom: 50px !important;
 
 
   }
@@ -141,6 +157,7 @@ footer {
 
   .content {
       padding-left: 0;
+      height: 950px;
   }
 
   .content-block {
@@ -162,9 +179,10 @@ footer {
     margin-bottom: 20px;
   }
 
-  h3.mb-5 {
-    margin-bottom: 1.5rem; /* ou même 1rem si tu veux */
+  img{
+    margin-bottom: 20px;
   }
+
 }
 
 .conteneur-bouton{
