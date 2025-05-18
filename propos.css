@@ -106,6 +106,11 @@ footer {
   object-fit: cover;
 }
 
+
+.propos-bouton{
+  margin: 90px 0 ;
+}
+
 @media (max-width: 768px) {
 
   /* Cache l'image collée à droite en version mobile */
