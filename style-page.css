@@ -1,58 +1,68 @@
-body {
-  overflow-x: hidden;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&display=swap");
 
-h3 {
-  margin-top: 100px;
-}
-
-/* Appliquer au body et html */
+/* RESET + BASE */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background: white;
+  color: black;
 }
 
-/* Appliquer à un wrapper global */
-body > .kebaba-container {
-  flex: 1 0 auto;
+/* HEADER FIXE */
+#main-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: top 0.3s ease;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.header-hidden {
+  top: -80px;
+}
+
+/* STRUCTURE FLEX DU BODY */
 body {
   display: flex;
   flex-direction: column;
 }
-footer {
-  flex-shrink: 0;
-}
 
-#vert{
-  width: 1300px;
+/* CONTAINER PRINCIPAL */
+body > .kebaba-container {
+  flex: 1 0 auto;
 }
 
 .kebaba-container {
-  padding-top: 80px; /* Réduit pour correspondre à la hauteur du header */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 20px 100px; /* padding top = hauteur du header */
   min-height: 100vh;
-  margin-bottom: 100px;
 }
 
+/* SECTIONS STICKY */
 .sticky-section {
   display: flex;
   position: relative;
   margin-bottom: 50px;
   padding: 0 20px;
+  gap: 30px;
 }
 
+/* IMAGE STICKY */
 .sticky-image {
-  width: 50%;
   position: sticky;
-  top: 80px; /* Réduit pour se rapprocher du header */
-  height: calc(100vh - 80px); /* Calcule la hauteur entre le header et le bas de l'écran */
+  top: 80px;
+  width: 50%;
+  height: calc(100vh - 80px);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  height: calc(100vh - 80px); /* trop grand en mobile */
 }
 
 .sticky-image img {
@@ -61,6 +71,7 @@ footer {
   object-fit: contain;
 }
 
+/* CONTENU À DROITE */
 .content {
   width: 50%;
   padding-left: 40px;
@@ -84,6 +95,12 @@ footer {
   margin-bottom: 20px;
 }
 
+/* TITRES */
+h3 {
+  margin-top: 100px;
+}
+
+/* SCROLL SECTION PLEIN ÉCRAN */
 .full-scroll-section {
   height: 100vh;
   display: flex;
@@ -106,14 +123,7 @@ footer {
   max-width: 600px;
 }
 
-.img-kebaba {
-  height: 900px;           /* fixe la même hauteur pour toutes */
-  width: 200px;             /* laisse la largeur s’ajuster naturellement */
-  max-width: 100%;
-  object-fit: cover;       /* ou "contain" si tu veux tout voir sans crop */
-  flex: 1;
-}
-
+/* DEUX IMAGES */
 .deux-images {
   display: flex;
   justify-content: center;
@@ -122,49 +132,63 @@ footer {
   flex-wrap: nowrap;
 }
 
-@media (max-width: 768px) {
+.img-kebaba {
+  height: 900px;
+  width: 200px;
+  max-width: 100%;
+  object-fit: cover;
+  flex: 1;
+}
 
-  h3{
+#vert {
+  width: 1300px;
+}
+
+/* FOOTER COLLÉ EN BAS */
+footer {
+  flex-shrink: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  h3 {
     margin-left: 10px;
     margin-top: 50px;
     font-size: 40px;
-
-
   }
 
   .sticky-section {
-      flex-direction: column;
-
+    flex-direction: column;
   }
 
-  .sticky-image, .content {
-      width: 100%;
+  .sticky-image,
+  .content {
+    width: 100%;
   }
 
   .sticky-image {
-    height: auto !important; /* force */
+    height: auto !important;
     max-height: none;
     margin-top: 0;
     padding-top: 0;
     position: static !important;
   }
 
-
   .sticky-image img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
   }
 
   .content {
-      padding-left: 0;
+    padding-left: 0;
   }
 
   .content-block {
-      margin-bottom: 20vh;
+    margin-bottom: 20vh;
   }
 
-  #deux-images{
+  #deux-images {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -177,15 +201,15 @@ footer {
 
   .img-kebaba {
     width: 90%;
-    height: auto;     /* sur mobile, on laisse les images naturelles */
+    height: auto;
     object-fit: contain;
   }
 
-  #premiere-image{
+  #premiere-image {
     margin-bottom: 20px;
   }
 
   h3.mb-5 {
-    margin-bottom: 1.5rem; /* ou même 1rem si tu veux */
+    margin-bottom: 1.5rem;
   }
 }
