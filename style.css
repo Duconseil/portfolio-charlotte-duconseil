@@ -187,6 +187,10 @@ section.project {
   display: block;
 }
 
+.animaux-img {
+  object-position: center 42%;
+}
+
 /* Overlay texte centré */
 .overlay {
   position: absolute;
