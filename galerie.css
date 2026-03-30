@@ -4,16 +4,20 @@
 /* ========================= */
 
 .grid {
-  column-count: 3;
-  column-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
   padding: 120px 40px;
   max-width: 1200px;
   margin: auto;
+
+  grid-auto-rows: 10px; /* base pour le calcul */
 }
 
 .grid img {
   width: 100%;
-  margin-bottom: 20px;
+  display: block;
   cursor: pointer;
 
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -27,7 +31,7 @@
 /* MOBILE */
 @media (max-width: 768px) {
   .grid {
-    column-count: 1;
+    grid-template-columns: 1fr;
     max-width: 90%;
     padding: 100px 20px;
   }

@@ -32,19 +32,19 @@
   <div class="grid">
 
     <img src="img_concert/1.webp" alt="">
-    <img src="img_concert/7.webp" alt="">
-    <img src="img_concert/8.webp" alt="">
-    <img src="img_concert/12.webp" alt="">
-    <img src="img_concert/13.webp" alt="">
-    <img src="img_concert/3.webp" alt="">
     <img src="img_concert/2.webp" alt="">
-    <img src="img_concert/6.webp" alt="">
-    <img src="img_concert/10.webp" alt="">
-    <img src="img_concert/14.webp" alt="">
-    <img src="img_concert/11.webp" alt="">
+    <img src="img_concert/3.webp" alt="">
     <img src="img_concert/4.webp" alt="">
     <img src="img_concert/5.webp" alt="">
+    <img src="img_concert/6.webp" alt="">
+    <img src="img_concert/7.webp" alt="">
+    <img src="img_concert/8.webp" alt="">
     <img src="img_concert/9.webp" alt="">
+    <img src="img_concert/10.webp" alt="">
+    <img src="img_concert/11.webp" alt="">
+    <img src="img_concert/12.webp" alt="">
+    <img src="img_concert/13.webp" alt="">
+    <img src="img_concert/14.webp" alt="">
     <img src="img_concert/15.webp" alt="">
     <img src="img_concert/16.webp" alt="">
     <img src="img_concert/17.webp" alt="">
@@ -139,4 +139,20 @@ document.addEventListener('keydown', (e) => {
   if (e.key === "ArrowLeft") prev();
   if (e.key === "Escape") closeLightbox();
 });
+
+function resizeGridItems() {
+  const grid = document.querySelector('.grid');
+  const rowHeight = parseInt(getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+  const gap = parseInt(getComputedStyle(grid).getPropertyValue('gap'));
+
+  grid.querySelectorAll('img').forEach(img => {
+    const height = img.getBoundingClientRect().height;
+    const rowSpan = Math.ceil((height + gap) / (rowHeight + gap));
+    img.style.gridRowEnd = "span " + rowSpan;
+  });
+}
+
+window.addEventListener('load', resizeGridItems);
+window.addEventListener('resize', resizeGridItems);
+
 </script>

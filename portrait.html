@@ -33,11 +33,20 @@
   <div class="grid">
 
     <img src="img_portrait/DSC00287.webp" alt="">
-    <img src="img_portrait/DSC00327.webp" alt="">
+    <img src="img_portrait/DSC00422.webp" alt="">
     <img src="img_portrait/DSC00343.webp" alt="">
     <img src="img_portrait/DSC00375.webp" alt="">
     <img src="img_portrait/DSC00410-Edit.webp" alt="">
     <img src="img_portrait/DSC00413.webp" alt="">
+
+    <img src="img_portrait/1.webp" alt="">
+    <img src="img_portrait/2.webp" alt="">
+    <img src="img_portrait/3.webp" alt="">
+    <img src="img_portrait/4.webp" alt="">
+    <img src="img_portrait/5.webp" alt="">
+    <img src="img_portrait/DSC00120.webp" alt="">
+    <img src="img_portrait/DSC00123.webp" alt="">
+
 
   </div>
 
@@ -129,4 +138,21 @@ document.addEventListener('keydown', (e) => {
   if (e.key === "ArrowLeft") prev();
   if (e.key === "Escape") closeLightbox();
 });
+
+
+function resizeGridItems() {
+  const grid = document.querySelector('.grid');
+  const rowHeight = parseInt(getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+  const gap = parseInt(getComputedStyle(grid).getPropertyValue('gap'));
+
+  grid.querySelectorAll('img').forEach(img => {
+    const height = img.getBoundingClientRect().height;
+    const rowSpan = Math.ceil((height + gap) / (rowHeight + gap));
+    img.style.gridRowEnd = "span " + rowSpan;
+  });
+}
+
+window.addEventListener('load', resizeGridItems);
+window.addEventListener('resize', resizeGridItems);
+
 </script>
