@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Photo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="galerie.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="img/fleur.png" alt="logo fleur">
+  </a>
+
+  <!-- BURGER -->
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="nav">
+    <a href="index.html">À propos</a>
+    <a href="index.html">Contact</a>
+  </nav>
+</header>
+
+<section class="gallery">
+
+  <div class="grid">
+
+    <img src="img_portrait/DSC00287.jpg" alt="">
+    <img src="img_portrait/DSC00327.jpg" alt="">
+    <img src="img_portrait/DSC00343.jpg" alt="">
+    <img src="img_portrait/DSC00375.jpg" alt="">
+    <img src="img_portrait/DSC00410-Edit.jpg" alt="">
+    <img src="img_portrait/DSC00413.jpg" alt="">
+
+  </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="close">&times;</span>
+  <span class="prev">&#10094;</span>
+  <span class="next">&#10095;</span>
+  <img id="lightbox-img">
+</div>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email : chaduconseil@gmail.com</p>
+  <p>Instagram : @2_chacha_2</p>
+</section>
+
+<footer>
+  © 2026 Charlotte Duconseil
+</footer>
+
+<script>
+const images = document.querySelectorAll('.grid img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+const header = document.querySelector('header');
+
+let currentIndex = 0;
+
+/* ouvrir */
+images.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    currentIndex = index;
+    updateImage();
+    lightbox.classList.add('active');
+    header.style.opacity = "0";
+  });
+});
+
+/* update image */
+function updateImage() {
+  lightboxImg.src = images[currentIndex].src;
+}
+
+/* next */
+function next() {
+  currentIndex = (currentIndex + 1) % images.length;
+  updateImage();
+}
+
+/* prev */
+function prev() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  updateImage();
+}
+
+nextBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  next();
+});
+
+prevBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  prev();
+});
+
+/* fermer */
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  header.style.opacity = "1";
+}
+
+closeBtn.addEventListener('click', closeLightbox);
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+/* clavier */
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('active')) return;
+
+  if (e.key === "ArrowRight") next();
+  if (e.key === "ArrowLeft") prev();
+  if (e.key === "Escape") closeLightbox();
+});
+</script>
