@@ -21,6 +21,7 @@ BASE
   color: inherit;
   display: block;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .card img {
